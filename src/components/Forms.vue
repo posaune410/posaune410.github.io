@@ -37,6 +37,7 @@
 </template>
 
 <script>
+  import AppServerUrl from '@/plugins/serverurl'
   import axios from 'axios'
 
   export default {
@@ -65,7 +66,7 @@
           }
         )
         axios.post(
-          'http://127.0.0.1:8000/myapp/regist/',
+          AppServerUrl + '/myapp/regist/',
           {
             "child_id" : this.child_status_input.child_id,
             "attendance" : this.child_status_input.attendance,

@@ -242,6 +242,7 @@
 </template>
 
 <script>
+  import AppServerUrl from '@/plugins/serverurl';
   import axios from 'axios'
   export default {
     name:"childminder_status",
@@ -289,7 +290,7 @@
           }
         )
         axios.post(
-          'http://127.0.0.1:8000/myapp/updatereply/',
+          AppServerUrl + '/myapp/updatereply/',
           {
             "child_id" : this.current_children.child_id,
             "reply" : "確認済み"
@@ -306,7 +307,7 @@
         this.childminder_status.childminder_id = this.$route.query.childminder_id;
         this.childminder_status.childminder_name = this.$route.query.childminder_name;
         axios.get(
-          'http://127.0.0.1:8000/myapp/children/'
+          AppServerUrl + '/myapp/children/'
         )
         .then(res => {
           this.attending_children = res.data.attending_children;
