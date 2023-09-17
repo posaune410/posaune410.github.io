@@ -1,4 +1,5 @@
 # 児童出欠管理アプリ「おるん」
+[![pages-build-deployment](https://github.com/posaune410/posaune410.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/posaune410/posaune410.github.io/actions/workflows/pages/pages-build-deployment)
 
 ## デモのURL
 https://posaune410.github.io/
