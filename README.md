@@ -28,32 +28,3 @@ https://posaune410.github.io/
 3. 以下のような児童一覧画面に遷移します。欠席児童をクリック（タップ）し、詳細を確認してください。
 ![児童一覧画面の例](images/capture1.PNG "image")
 4. 欠席児童の詳細画面にある「確認」ボタンによって保護者に確認したことを知らせることができます。
-
-
-## アプリのディレクトリ構成
-```
-mySite
-│  db.sqlite3
-│  manage.py
-│
-├─myapp
-│  │  admin.py
-│  │  apps.py
-│  │  initChildren.py
-│  │  initSetData.py
-│  │  models.py
-│  │  setDummyData.py
-│  │  tests.py
-│  │  urls.py
-│  │  views.py
-│  │  __init__.py
-│  │
-│  ├─migrations
-│     └─ __init__.py
-│
-└─mySite
-    │  asgi.py
-    │  settings.py
-    │  urls.py
-    │  wsgi.py
-    └─ __init__.py
