@@ -89,32 +89,34 @@
       }
     }),
 
-    created() { 
-      this.child_status.child_id = this.$route.query.child_id
-      
-      axios.post(
-        AppServerUrl + '/myapp/status/',
-        {
-          "child_id" : this.child_status.child_id
-        }
-        )
-      .then(res => {
-        this.child_status.child_name = res.data.child_name;
-        this.child_status.attendance = res.data.attendance;
-        this.child_status.datetime = res.data.datetime;
-        this.child_status.reason = res.data.reason;
-        this.child_status.reply = res.data.reply;
-        console.log(res);
-      })
-
-      
-
+    created() {
+      setTimeout(this.recvStatus, 1000);
     },
 
     methods: {
       toForm() {
         this.$router.push({path: '/forms', query: {child_id: this.child_status.child_id, child_name: this.child_status.child_name}})
       },
+
+      recvStatus() { 
+        this.child_status.child_id = this.$route.query.child_id
+        
+        axios.post(
+          AppServerUrl + '/myapp/status/',
+          {
+            "child_id" : this.child_status.child_id
+          }
+          )
+        .then(res => {
+          this.child_status.child_name = res.data.child_name;
+          this.child_status.attendance = res.data.attendance;
+          this.child_status.datetime = res.data.datetime;
+          this.child_status.reason = res.data.reason;
+          this.child_status.reply = res.data.reply;
+          console.log(res);
+        })
+      },
+
       attend_J() {
         if(this.child_status.attendance == "1") {
           this.attend_j = "出席"

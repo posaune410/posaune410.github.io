@@ -1,5 +1,6 @@
 {
   "name": "vuetify-project2",
+  "homepage": "https://posaune410.github.io",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -8,8 +9,11 @@
   },
   "dependencies": {
     "@mdi/font": "7.0.96",
+    "axios": "^1.5.0",
+    "create-vue": "^3.7.4",
     "roboto-fontface": "*",
     "vue": "^3.2.0",
+    "vue-router": "^4.2.4",
     "vuetify": "^3.0.0",
     "webfontloader": "^1.0.0"
   },
